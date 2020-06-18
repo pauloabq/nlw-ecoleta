@@ -49,8 +49,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 #### Obter os arquivos
 
-```tsx
-$ git clone [https://github.com/pauloabq/nlw-ecoleta.git](https://github.com/pauloabq/nlw-ecoleta.git)
+```bash
+$ git clone https://github.com/pauloabq/nlw-ecoleta.git
 
 ```
 
