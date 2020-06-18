@@ -9,6 +9,10 @@ import ItemsController from './controllers/ItemsController'
 
 import multer from 'multer'
 import multerConfig from './config/multer';
+import dotenv from 'dotenv';
+dotenv.config({
+    path: process.env.NODE_ENV == "development" ? ".env.dev" : ".env"
+});
 
 const routes = express.Router();
 const upload = multer(multerConfig)

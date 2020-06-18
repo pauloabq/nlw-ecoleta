@@ -2,8 +2,6 @@
 import {Request, Response} from 'express'
 import knex from '../database/connection'
 
-const IMAGE_URI: string = "http://192.168.0.164:3333/uploads/";        
-
 class PointsController {
 
     // tipos Request e Response
@@ -25,7 +23,7 @@ class PointsController {
                                 */
             const serializedPoint = {
                     ...point,
-                    image_url: `${IMAGE_URI}${point.image}`
+                    image_url: `${process.env.SERVER_NAME}/uploads/${point.image}`
             }
             return response.json({ point: serializedPoint, items})
         }
@@ -108,7 +106,7 @@ try {
         const serializedPoints = points.map( point =>{
             return {
                 ...point,
-                image_url: `${IMAGE_URI}${point.image}`
+                image_url: `${process.env.SERVER_NAME}/uploads/${point.image}`
             }
         })
 
